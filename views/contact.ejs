@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partitials/header.partitial.ejs') %>
+
+<body>
+    
+    <%- include('./partitials/nav.partitial.ejs') %>
+
+    <div class="wrapper content_1">
+        <div class="main-body">
+            <div class="content">
+                <h1 class="title">Contact me</h1>
+                <div class="text">
+                    <div class="email">
+                        <h2>Email</h2>
+                        <span>contact@olliewells.co.uk</span>
+                    </div>
+                    <div class="phone">
+                        <h2>Phone</h2>
+                        <span>07305928512</span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="javascript:document.querySelector('form').scrollIntoView({ behavior: 'smooth', block: 'start' });"><button class="btn-main">Contact Form</button></a><br>
+                    <a href="/portfolio"><button class="btn-secondary">My Portfolio</button></a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="/images/building-websites.svg">
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="wrapper content_4">
+        <div class="header">
+            <h1 class="title">Contact Me</h1>
+            <div class="hl"></div>
+        </div>
+        <div class="main-body">
+            <form action="/contact" method="post">
+                <h3>What are you looking for?</h3>
+
+                <div class="services">
+                    <input type="checkbox" id="service1" name="service" value="Web Design">
+                    <label for="service1">Web Design</label>
+                    <br>
+                    <input type="checkbox" id="service2" name="service" value="Web Management">
+                    <label for="service2">Web Management</label>
+                </div>
+                <br>
+                <div class="text-info">
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name *" required>
+                    <br>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number *" required>
+                    <br>
+                    <input type="text" id="emailAddress" name="emailAddress" placeholder="Email Address *" required>
+                    <br>
+                    <select name="referer" id="referer" required>
+                        <option value="">Where did you hear about me?</option>
+                        <option value="google">Google</option>
+                        <option value="socialMedia">Social Media</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <textarea name="projectDescription" id="projectDescription" placeholder="Describe your project *" required></textarea>
+                </div>
+                <br>
+                <ul class="budgets">
+                    <li>
+                        <input type="radio" id="budget1" name="budget" value="£50-£250">
+                        <label for="budget1">£50-£250</label>
+                    </li>
+                    <br>
+                    <li>
+                        <input type="radio" id="budget2" name="budget" value="£250-£500">
+                        <label for="budget2">£250-£500</label>
+                    </li>
+                    <br>
+                    <li>
+                        <input type="radio" id="budget3" name="budget" value="£500-£1000">
+                        <label for="budget3">£500-£1000</label>
+                    </li>
+                    <br>
+                    <li>
+                        <input type="radio" id="budget4" name="budget" value="£1000+">
+                        <label for="budget4">£1000+</label>
+                    </li>
+                </ul>
+                <div class="submit-btn">
+                    <input type="submit" value="Send Request >">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('./partitials/footer.partitial.ejs') %>
+
+</body>
+</html>

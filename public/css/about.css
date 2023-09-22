@@ -1,0 +1,145 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 50px;
+
+    position: relative;
+}
+
+/* Section 1 */
+
+.content_1 {
+    margin-top: 8rem;
+}
+
+.content_1 .main-body .image {
+    max-width: 600px;
+    width: 80%;
+    height: auto;
+    float: right;
+
+    position: relative;
+}
+
+.content_1 .main-body .image img {
+    width: 100%;
+    height: auto;
+}
+
+.content_1 .main-body .content {
+    max-width: 40%;
+}
+
+.content_1 .main-body .content h1 {
+    font-size: 4.8rem;
+    text-align: left;
+}
+
+.content_1 .main-body .content h1 span {
+    font-size: 4.8rem;
+    color: var(--accent);
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+.content_1 .main-body .content p {
+    font-size: 2.4rem;
+}
+
+.content_1 .main-body .content button {
+    padding: 1.0rem 1.2rem;
+    margin: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    width: 40%;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.content_1 .main-body .content button:hover {
+    transform: scale(1.25);
+}
+
+.content_1 .main-body .content button.btn-main {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 3px solid var(--accent);
+}
+
+.content_1 .main-body .content button.btn-main:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.content_1 .main-body .content button.btn-secondary {
+    background-color: transparent;
+    border: 3px solid var(--accent);
+    color: var(--accent);
+}
+
+.content_1 .main-body .content button.btn-secondary:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 3px solid var(--accent);
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .main-body .content {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .main-body .content button {
+        max-width: 20rem;
+        margin: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .main-body .content  h1 {
+        font-size: 3.2rem !important;
+    }
+    .main-body .content  h1 span {
+        font-size: 3.6rem !important;
+    }
+    .main-body .content p {
+        font-size: 1.8rem !important;
+    }
+    .main-body .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-body .content a {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0 1.2rem;
+        position: relative;
+    }
+    .main-body .content button {
+        max-width: 100%;
+        min-width: 100%;
+        width: auto;
+        margin: 1.2rem 0 !important;
+    }
+    .main-body .content button:hover {
+        transform: scale(1.1) !important;
+    }
+}

@@ -1,0 +1,246 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    max-width: 1200px;
+
+    margin-top: 12rem;
+}
+
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    position: relative;
+}
+
+.wrapper .header {
+    margin: 2.4rem auto 3.6rem auto;
+}
+
+.wrapper .header h1 {
+    font-size: 4.8rem;
+}
+
+.wrapper .header .hl {
+    width: 30%;
+    border-bottom: 1px solid var(--secondary);
+    margin: 1.2rem auto;
+}
+
+.spacer {
+    margin: 10rem 0;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: hidden;
+    left: 0;
+    border-bottom: 1px solid var(--secondary);
+}
+
+/* Section 2 */
+
+.content_2 .main-body .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.content_2 .columns {
+    width: 45%;
+    padding: 2rem;
+}
+
+.content_2 .columns .service {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.content_2 .columns .service:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.content_2 .columns .service .header {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+.content_2 .columns .service li {
+    border-bottom: 1px solid var(--secondary);
+    padding: 2rem;
+    text-align: center;
+}
+
+.content_2 .columns .service li:not(.header) {
+    border-right: 1px solid var(--secondary);
+    border-left: 1px solid var(--secondary);
+}
+
+.content_2 .columns .service .important {
+    color: var(--primary);
+    font-weight: 500;
+    text-align: center;
+    background-color: var(--secondary);
+}
+
+.content_2 .columns .service .important.small {
+    height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_2 .columns .service a {
+    display: block;
+}
+
+.content_2 .columns .service button {
+    padding: 1.0rem 1.2rem;
+    margin: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    width: 80%;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 3px solid var(--accent);
+}
+
+.content_2 .columns .service button:hover {
+    transform: scale(1.25);
+    background-color: transparent;
+    color: var(--accent);
+}
+
+@media screen and (max-width: 1200px) {
+    .content_2 .main-body .content {
+        flex-direction: column;
+    }
+    .content_2 .columns {
+        width: 100%;
+    }
+}
+
+/* Content 5 */
+/* 
+.content_5 .content {
+    max-width: 65.0rem;
+}
+
+.content_5 .content form label {
+    font-size: 1.8rem;
+}
+
+.content_5 .content form label span {
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--secondary);
+}
+
+.content_5 .content form label .tooltiptext {
+    opacity: 0;
+    visibility: hidden;
+    min-width: 150px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; 
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 1.6rem !important;
+    
+    position: absolute;
+    z-index: 1;
+
+    transition: all 0.2s ease;
+}
+
+.content_5 .content form label .tooltiptext strong {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--primary);
+    margin-bottom: 0.4rem;
+}
+
+.content_5 .content form label span:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content_5 .content form input[type="number"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary);
+    background-color: var(--primary);
+    margin: 1.2rem auto;
+    font-size: 1.8rem;
+    padding: 0.8rem;
+}
+
+.content_5 .content form input[type="number"]:focus {
+    border-bottom: 1px solid var(--accent);
+    font-weight: 600;
+}
+
+.content_5 .content form .tip strong {
+    font-size: 1.8rem;
+}
+
+.content_5 .content form .tip {
+    font-size: 1.4rem;
+}
+
+.content_5 .content form .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+}
+
+.content_5 .content form submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content_5 .content form input[type="submit"] {
+    margin-top: 1.2rem;
+    padding: 1.0rem 1.2rem;
+    margin: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    border-radius: 0px;
+
+    width: 100%;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 3px solid var(--accent);
+}
+
+.content_5 .content form input[type="submit"]:hover {
+    background-color: transparent;
+    color: var(--accent);
+    border: 3px solid var(--accent);
+    transform: scale(1.25);
+} */

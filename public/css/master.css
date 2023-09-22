@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-size: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primary: #FAFBF5;
+    --secondary: #191919; 
+    --accent: #ED1C24;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    max-width: 1200px !important;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    overflow-x: hidden;
+    text-overflow: wrap;
+
+    position: relative;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Navbar Styles */
+
+li, a, button {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    max-width: 1200px;
+    width: 100%;
+    background-color: var(--primary);
+    margin-bottom: 4rem;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.menu__btn {
+    display: none;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0rem 2rem;
+}
+
+.nav__links a li {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding: 0 1.2rem;
+    margin: 0.6rem;
+}
+
+.nav__links a li:hover {
+    transform: scale(1.25);
+    color: var(--accent);
+}
+
+.cta {
+    padding: 0 2rem;
+    margin: 0 2rem;
+}
+
+.cta button {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--primary);
+    border: 3px solid var(--accent);
+    cursor: pointer;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.cta button:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
+    transform: scale(1.25);
+}
+
+@media only screen and (max-width: 860px ) {
+    header {
+        justify-content: space-between;
+    }
+    .menu__btn {
+        display: block;
+        margin-right: 3.6rem;
+
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+    }
+    .menu__btn:hover {
+        color: var(--accent);
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+    }
+    nav {
+        display: none;
+    }
+    .cta {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 860px ) {
+    body.nav__expand {
+        overflow: hidden;
+    }
+    header.responsive {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header.responsive .menu__btn {
+        position: absolute;
+        top: 2.6rem;
+        right: 0;
+    }
+    header.responsive nav {
+        display: block;
+        width: 100%;
+    }
+    header.responsive .nav__links li {
+        display: block;
+        padding: 1.8rem;
+        border-bottom: 1px solid var(--secondary);
+        width: 100%;
+        font-size: 2.4rem;
+
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    header.responsive .nav__links li:hover {
+        margin-left: 3.6rem;
+        border-bottom: 3px solid var(--accent);
+        transform: scale(1);
+    }
+    header.responsive .cta {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    header.responsive .cta button {
+        font-size: 2.4rem;
+        width: 100%;
+        text-align: left;
+        transform: scale(1);
+        margin: 0;
+    }
+    header.responsive .cta button:hover {
+        transform: scale(1);
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1rem;
+    margin-top: 80px;
+    font-size: 1.6rem;
+}
+
+footer span {
+    color: var(--accent);
+    font-size: 1.6rem;
+    margin: 0.6rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 300px) {
+    footer {
+        flex-direction: column;
+    }
+}
